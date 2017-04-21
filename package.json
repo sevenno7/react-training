@@ -1,0 +1,54 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all --parallel webpack-dev:watch lint:watch",
+    "webpack-dev:watch": "webpack-dev-server --watch --config ./webpack/webpack.config.dev.js",
+    "lint": "esw src",
+    "lint:watch": "npm run lint -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevenno7/react-training.git"
+  },
+  "author": "Tri <tri.hoang3011@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevenno7/react-training/issues"
+  },
+  "homepage": "https://github.com/sevenno7/react-training#readme",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.14.7",
+    "reselect": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.2",
+    "babel-loader": "^6.4.1",
+    "babel-preset-react-app": "^2.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-redux-saga": "^0.3.0",
+    "eslint-watch": "^3.1.0",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2",
+    "write-file-webpack-plugin": "^4.0.2"
+  }
+}

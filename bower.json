@@ -1,0 +1,21 @@
+{
+  "name": "react-training",
+  "homepage": "https://github.com/sevenno7/react-training",
+  "authors": [
+    "Tri <tri.hoang3011@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
