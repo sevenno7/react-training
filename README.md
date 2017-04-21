@@ -1,4 +1,4 @@
 # react-training
 
-*npm i
-*bower i
+* npm i
+* bower i
