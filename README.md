@@ -1,8 +1,8 @@
 # react-training
 
-install packages.
+1. install packages.
 * npm i
 * bower i
-start project.
+2. start project.
 * npm run dev
-open webbrowser at http://localhost:3000
+3. open webbrowser at http://localhost:3000
