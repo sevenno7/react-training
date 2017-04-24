@@ -3,21 +3,22 @@ import PropTypes from 'prop-types'
 
 import PureInput from './PureInput';
 
-const FormControl = ({ type, ...props }) => {
+const FormControl = ({ type, input = {}, meta : { touched, error, warning }, ...props }) => {
   switch (type) {
     case 'hidden': {
-      return <PureInput type="hidden" {...props} />
+      return (
+        <PureInput type="hidden" {...input} {...props} />)
     }
     case 'text': {
-      return <PureInput type="text" className="form-control" {...props}/>
+      return (<PureInput type="text" className="form-control" {...input} {...props} />)
     }
     case 'number': {
-      return <PureInput type="number" className="form-control"  {...props}/>
+      return (<PureInput type="number" className="form-control" {...input} {...props} />)
     }
     case 'textarea': {
       const { value, ...rest } = props;
 
-      return (<textarea className="form-control" {...rest}>
+      return (<textarea className="form-control"  {...input} {...rest}>
         {value}
       </textarea>)
     }
