@@ -49,3 +49,4 @@ dist/js/
 node_modules/
 dist/lib/
 .idea/
+/dist/js/main.js

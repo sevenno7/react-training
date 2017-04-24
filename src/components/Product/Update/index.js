@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import EditProductForm from '../_Partials/ProductForm';
 
 class UpdateProductContainer extends Component {
-    render() {
-        return (
-            <div>
-                Update Product Container
-            </div>
-        );
-    }
+
+  componentWillMount() {
+
+  }
+
+  render() {
+    const { product = {id: 1, title: 'abcd'} } = this.state;
+    return (
+      <EditProductForm
+
+        initialValues={{...product}}
+      />
+    );
+  }
 }
 
 export default UpdateProductContainer;
