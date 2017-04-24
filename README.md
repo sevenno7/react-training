@@ -1,5 +1,8 @@
 # react-training
 
+* NodeJS is required
+* Bower is required (run "npm install -g bower" if it is not already installed)
+
 1. install packages.
 * npm i
 * bower i
