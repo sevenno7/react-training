@@ -1,16 +1,17 @@
 import React from 'react';
-import Label from './Label';
-import PureInput from './PureInput';
+import  { Label, FieldControl } from './index'
 
 export default class FieldGroup extends React.Component {
 
   render() {
-    const { type, label, labelUnderscore, ...rest} = this.props;
+    const { id, type, label, width = 10, ...rest} = this.props;
 
     return (
       <div className="form-group">
-        <Label label={label} underscore={labelUnderscore}/>
-        <PureInput type={type} {...rest} />
+        <Label {...label} htmlFor={id}/>
+        <div className={`col-sm-${width}`}>
+          <FieldControl type={type} id={id} {...rest} />
+        </div>
       </div>
     )
   }
