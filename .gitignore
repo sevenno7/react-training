@@ -48,3 +48,4 @@ Temporary Items
 dist/js/
 node_modules/
 dist/lib/
+.idea/
