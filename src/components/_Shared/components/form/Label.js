@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Label = (props) => {
-  const { label, underscore } = props;
+  const { label, width = 2, ...rest } = props;
   return (
-    <label style={{textDecoration: `${underscore ? 'underscore': ''}`}} >{props.label}</label>
+    <label className={`control-label col-sm-${width}`} {...rest}>{props.label}</label>
   )
 };
 
