@@ -20,12 +20,12 @@ class ProductForm extends React.Component {
     return (
       <form className="horizontal-form" onSubmit={handleSubmit}>
         <Field component={FieldGroup}
-               name="productId"
+               name="id"
                type="hidden"
         />
         <div className="row margin-top-md">
           <Field component={FieldGroup}
-                 name="productTitle"
+                 name="title"
                  type="text"
                  label={{ label: 'Product Title', width: 2 }}
                  id="product-title"
@@ -34,7 +34,7 @@ class ProductForm extends React.Component {
         </div>
         <div className="row margin-top-md">
          <Field component={FieldGroup}
-                name="productDescription"
+                name="description"
                 type="textarea"
                 label={{ label: 'Description', width: 2 }}
                 id="product-description"
@@ -43,7 +43,7 @@ class ProductForm extends React.Component {
         </div>
         <div className="row margin-top-md">
           <Field component={FieldGroup}
-                 name="productPrice"
+                 name="price"
                  type="number"
                  label={{ label: 'Price', width: 2 }}
                  id="product-price"
