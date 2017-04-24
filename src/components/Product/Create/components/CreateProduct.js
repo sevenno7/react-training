@@ -6,10 +6,16 @@ import ProductForm from '../../_Partials/ProductForm'
 
 class CreateProduct extends React.Component {
 
+  handleSubmit = (values) => {
+    console.log('Product Title: ', values.get('productTitle'));
+  }
+
   render() {
     return (
       <div className="container">
-        <ProductForm />
+        <ProductForm
+          onSubmit={this.handleSubmit}
+        />
       </div>
     )
   }

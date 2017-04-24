@@ -5,6 +5,9 @@ export default class FieldGroup extends React.Component {
 
   render() {
     const { id, type, label, width = 10, ...rest} = this.props;
+    if (type === 'hidden') {
+      return (<FieldControl type={type} id={id} {...rest} />);
+    }
 
     return (
       <div className="form-group">
