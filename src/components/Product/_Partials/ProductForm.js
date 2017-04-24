@@ -3,34 +3,65 @@ import { Field, reduxForm } from 'redux-form/immutable'
 import { FieldGroup } from '../../../components/_Shared'
 
 const validate = (values) => {
+  const errors = {}
+  // TODO: implement code to validate form
+  const productTitle = values.get('productTitle');
+  if (productTitle && (productTitle.trim().length === 0) ) {
 
+  }
+
+  return errors;
 }
 
 class ProductForm extends React.Component {
 
   render() {
-    const {productTitle, productDescription } = this.props
+    const { handleSubmit, pristine, reset, submitting } = this.props
     return (
-      <form className="horizontal-form">
-        <div className="row">
-          <FieldGroup
-            type="text"
-            label={{ label: 'Product Title', width: 2 }}
-            id="product-title"
-            onChange={() => {}}
-            value={productTitle}
-            placeholder="Enter your product title here"
+      <form className="horizontal-form" onSubmit={handleSubmit}>
+        <Field component={FieldGroup}
+               name="productId"
+               type="hidden"
+        />
+        <div className="row margin-top-md">
+          <Field component={FieldGroup}
+                 name="productTitle"
+                 type="text"
+                 label={{ label: 'Product Title', width: 2 }}
+                 id="product-title"
+                 placeholder="Enter your product title here"
           />
         </div>
-        <div className="row">
-          <FieldGroup
-            type="textarea"
-            label={{ label: 'Description', width: 2 }}
-            id="product-title"
-            onChange={() => {}}
-            value={productDescription}
-            placeholder="Enter your description here"
+        <div className="row margin-top-md">
+         <Field component={FieldGroup}
+                name="productDescription"
+                type="textarea"
+                label={{ label: 'Description', width: 2 }}
+                id="product-description"
+                placeholder="Enter your description here"
+         />
+        </div>
+        <div className="row margin-top-md">
+          <Field component={FieldGroup}
+                 name="productPrice"
+                 type="number"
+                 label={{ label: 'Price', width: 2 }}
+                 id="product-price"
+                 placeholder="Enter your description here"
           />
+        </div>
+        <div className="row margin-top-md text-center">
+          <button type="submit"
+                  disabled={submitting}
+                  className="btn btn-md btn-success margin-right-md">
+            Save
+          </button>
+          <button type="button"
+                  disabled={pristine || submitting}
+                  onClick={reset}
+                  className="btn btn-md btn-danger">
+            Clear
+          </button>
         </div>
       </form>
     )
