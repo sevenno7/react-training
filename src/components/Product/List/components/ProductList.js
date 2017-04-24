@@ -26,6 +26,7 @@ class ProductList extends Component {
                             </span>List</a> <a id="grid" className="btn btn-default btn-sm" onClick={this.gridClick}><span
                                 className="glyphicon glyphicon-th"/>Grid</a>
                     </div>
+                    <button type="button" className="btn btn-link">Create Product</button>
                 </div>
                 <div id="products" className="row list-group">
                     {products.map(product => (
