@@ -24,7 +24,7 @@ class ProductList extends Component {
                         <a id="list" className="btn btn-default btn-sm" onClick={this.listClick}>
                             <span className="glyphicon glyphicon-th-list">
                             </span>List</a> <a id="grid" className="btn btn-default btn-sm" onClick={this.gridClick}><span
-                                className="glyphicon glyphicon-th"></span>Grid</a>
+                                className="glyphicon glyphicon-th"/>Grid</a>
                     </div>
                     <button type="button" className="btn btn-link">Create Product</button>
                 </div>
