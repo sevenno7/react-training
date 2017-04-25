@@ -3,10 +3,10 @@ import { Field, reduxForm } from 'redux-form/immutable'
 import { FieldGroup } from '../../../components/_Shared'
 
 const validate = (values) => {
+  const { id, title, description, price } = values.toJS();
   const errors = {}
   // TODO: implement code to validate form
-  const productTitle = values.get('productTitle');
-  if (productTitle && (productTitle.trim().length === 0) ) {
+  if (title && (title.trim().length === 0)) {
 
   }
 
