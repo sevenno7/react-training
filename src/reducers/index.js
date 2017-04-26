@@ -5,6 +5,7 @@ import { reducer as formReducer } from 'redux-form/immutable'
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { productListContainerReducer } from '../components/Product/List/reducers';
 import { updateProductContainerReducer } from '../components/Product/Update/reducers';
+import { saveProduct } from '../components/Product/Create/reducers';
 
 const routeInitialState = fromJS({
   location: null,
@@ -25,5 +26,6 @@ export default combineReducers({
   router: routerReducer,
   form: formReducer,
   products: productListContainerReducer,
-  product: updateProductContainerReducer
+  product: updateProductContainerReducer,
+  newProduct: saveProduct
 });
