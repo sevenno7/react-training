@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link  } from 'react-router-dom';
 
 class ProductList extends Component {
     
@@ -26,7 +27,7 @@ class ProductList extends Component {
                             </span>List</a> <a id="grid" className="btn btn-default btn-sm" onClick={this.gridClick}><span
                                 className="glyphicon glyphicon-th"/>Grid</a>
                     </div>
-                    <button type="button" className="btn btn-link">Create Product</button>
+                    <Link to="/create" className="btn btn-link">Create Product</Link>
                 </div>
                 <div id="products" className="row list-group">
                     {products.map(product => (

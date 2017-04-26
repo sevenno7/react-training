@@ -16,9 +16,17 @@ const validate = (values) => {
 class ProductForm extends React.Component {
 
   render() {
-    const { handleSubmit, pristine, reset, submitting } = this.props
+    const { handleSubmit, pristine, reset, submitting, successMessage } = this.props
     return (
       <form className="horizontal-form" onSubmit={handleSubmit}>
+
+        {
+          successMessage &&
+          <div className="alert alert-success">
+            <strong>Success!</strong> {successMessage}
+          </div>
+        }
+
         <Field component={FieldGroup}
                name="id"
                type="hidden"
@@ -47,9 +55,10 @@ class ProductForm extends React.Component {
                  type="number"
                  label={{ label: 'Price', width: 2 }}
                  id="product-price"
-                 placeholder="Enter your description here"
+                 placeholder="Enter your price here"
           />
         </div>
+
         <div className="row margin-top-md text-center">
           <button type="submit"
                   disabled={submitting}
@@ -63,6 +72,7 @@ class ProductForm extends React.Component {
             Clear
           </button>
         </div>
+
       </form>
     )
   }
