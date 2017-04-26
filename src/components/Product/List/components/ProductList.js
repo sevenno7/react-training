@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link  } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 class ProductList extends Component {
     
     listClick = (e) => {
@@ -42,7 +41,10 @@ class ProductList extends Component {
                                             <p className="lead">{product.price}</p>
                                         </div>
                                         <div className="col-xs-12 col-md-6">
-                                            <a className="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                            <div className="btn-group">
+                                                <a className="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                                <Link to={`product/update/${product.id}`} className="btn btn-danger">Edit</Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

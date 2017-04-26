@@ -17,8 +17,8 @@ import rootReducer from './reducers';
 
 import { Navbar } from './components/_Shared';
 import Home from './components/Home';
-import { ListProductContainer } from './components/Product';
-import { CreateProductContainer } from './components/Product';
+import { ListProductContainer, CreateProductContainer, UpdateProductContainer } from './components/Product';
+
 
 const history = createHistory();
 const sagaMiddleware = createSagaMiddleware();
@@ -45,6 +45,7 @@ const App = () => {
 
       <Route exact path="/" component={Home} />
       <Route exact path="/product" component={ListProductContainer} />
+      <Route exact path="/product/update/:id" component={UpdateProductContainer} />
       <Route exact path="/create" component={CreateProductContainer} />
     </section>
   );
