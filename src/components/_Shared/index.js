@@ -1,4 +1,4 @@
 import Navbar from './components/Navbar';
-export { Label, PureInput, TextArea, FieldGroup } from './components/form'
+export { Label, PureInput, FieldControl, FieldGroup } from './components/form'
 
 export { Navbar };
