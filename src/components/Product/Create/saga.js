@@ -15,7 +15,7 @@ function createProduct(product) {
     setTimeout(() => {
       const result = {
         productId : new Date().getTime(),
-        message: `Saved product with title '${product.title}' successfully.`
+        message: `Product with title '${product.title}' is saved successfully.`
       };
       res(result);
     }, 1000);
@@ -29,9 +29,7 @@ function* saveProduct(action) {
     action.product.id = result.productId;
 
     const products = yield select(getProducts);
-    console.log('BEFORE-', products);
     products.push(action.product);
-    console.log('productsproductsproductsproductsproducts-', products);
     yield put(saveProductSuccess(result.message));
   } catch (e) {
     console.error(e);
